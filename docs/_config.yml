@@ -1,0 +1,31 @@
+title: pk_portfolio
+email: prerana0207@gmail.com
+description: >-
+  I wonder who this is?
+baseurl: "/docs" # subpath of the site if hosted at /docs
+url: "https://pk0207.github.io" # base hostname
+repository: pk0207/pk0207.github.io
+
+twitter_username: jekyllrb
+github_username: pk0207
+
+# Set where the site should be built to
+destination: ./_site
+
+# Build settings
+remote-theme: piazzai/hacked-jekyll
+plugins:
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-github-metadata
+
+# Exclude files from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Optional: include any folders outside `docs/` you need (if needed)
+# include:
+#   - ../some-shared-folder
