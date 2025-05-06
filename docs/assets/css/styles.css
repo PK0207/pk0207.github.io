@@ -10,7 +10,14 @@
   font-style: italic;
   font-weight: 400;
   src: url("../webfonts/hack-italic-subset.woff2") format("woff2"); }
-body {
+
+@font-face {
+  font-family: "naville";
+  font-display: swap;
+  font-style: normal;
+  src: url("../webfonts/Naville-Regular.ttf"); 
+}
+body.index{
   font-family: "hack", monospace;
   font-size: 16px;
   font-weight: 400;
@@ -22,6 +29,7 @@ main {
   width: 100%;
   padding: 1rem;
   box-sizing: border-box;
+  margin-left: 4rem;
   /*display: block;  ensure no flex/grid layout affects it */
 }
 
@@ -93,6 +101,7 @@ a:active {
   font-size: 1.5rem;
   color: #69db7c;
   margin-top: 2.5rem;
+  font-family: "naville";
 }
 
 .navbar .navlink {
@@ -115,3 +124,32 @@ a:active {
   width: 100%;
 }
 
+/*PROJECT CARDS*/
+body
+#project-card{
+  background-color: var(--oc-gray-8);
+  height: 10rem;
+  width: 100%;
+  padding: 2rem;
+}
+
+/*PYTHON STYLE*/
+.pydef{
+  color: var(--oc-yellow-4);
+}
+
+.pyfunc{
+  color: var(--oc-cyan-5);
+}
+
+.pyvar{
+  color: var(--oc-orange-4);
+}
+
+body.projects{
+  font-family: "hack", monospace;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: var(--oc-gray-9);
+  color: var(--oc-gray-4);
+}
