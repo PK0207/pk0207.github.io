@@ -15,14 +15,16 @@ body {
   font-size: 16px;
   font-weight: 400;
   background-color: var(--oc-gray-9);
-  color: var(--oc-green-9); }
+  color: var(--oc-green-9);
+}
 
 main {
-  position: absolute;
-  width: 98%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); }
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  /*display: block;  ensure no flex/grid layout affects it */
+}
+
 
 @media (min-width: 576px) {
   main {
@@ -32,7 +34,10 @@ main {
   main {
     font-size: 20px;
     width: 80%; } }
-h1,
+/*h1 {
+  
+}*/
+
 p {
   margin: 0; }
 
