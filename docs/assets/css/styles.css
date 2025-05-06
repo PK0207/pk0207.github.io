@@ -115,3 +115,13 @@ a:active {
   width: 100%;
 }
 
+/*PROJECT CARDS*/
+
+#project-card{
+  border-radius: 5%;
+  border-color: var(--oc-grape-8);
+  border: 5px solid;
+  background-color: var(--oc-yellow-0);
+  height: 20rem;
+
+}
