@@ -143,11 +143,11 @@ body.projects{
 .text-image-container {
   display: flex;
   justify-content: space-between;
-  align-items: center; /* optional: align vertically */
+  /*align-items: center;  optional: align vertically */
 }
 
 .text-image-container img {
-  width: 150px;
+  width: 500px;
   height: auto;
 }
 
