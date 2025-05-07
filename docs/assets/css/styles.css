@@ -80,6 +80,24 @@ a:active {
   color: var(--oc-green-4);
   text-transform: lowercase; }
 
+a.key {
+  color: var(--oc-blue-8);
+}
+
+a.key::before {
+  content: '->';
+  position: absolute;
+  left:6rem;
+  opacity: 0;
+  transform: translateX(-0.5em);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+a.key:hover::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .error,
 .value {
   color: var(--oc-green-4);
