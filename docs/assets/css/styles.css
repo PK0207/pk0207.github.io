@@ -81,7 +81,7 @@ a:active {
   text-transform: lowercase; }
 
 a.key {
-  color: var(--oc-blue-8);
+  color: var(--oc-blue-0);
 }
 
 a.key::before {
