@@ -80,6 +80,24 @@ a:active {
   color: var(--oc-green-4);
   text-transform: lowercase; }
 
+a.key {
+  color: var(--oc-blue-0);
+}
+
+a.key::before {
+  content: '->';
+  position: absolute;
+  left:6rem;
+  opacity: 0;
+  transform: translateX(-0.5em);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+a.key:hover::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .error,
 .value {
   color: var(--oc-green-4);
@@ -125,12 +143,30 @@ a:active {
 }
 
 /*PROJECT CARDS*/
-body
 #project-card{
   background-color: var(--oc-gray-8);
-  height: 10rem;
+  height: fit-content;
   width: 100%;
   padding: 2rem;
+}
+
+body.projects{
+  font-family: "hack", monospace;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: var(--oc-gray-9);
+  color: var(--oc-gray-4);
+}
+
+.text-image-container {
+  display: flex;
+  justify-content: space-between;
+  /*align-items: center;  optional: align vertically */
+}
+
+.text-image-container img {
+  width: 500px;
+  height: auto;
 }
 
 /*PYTHON STYLE*/
@@ -143,13 +179,23 @@ body
 }
 
 .pyvar{
-  color: var(--oc-orange-4);
+  color: var(--oc-green-4);
+  margin: 2rem;
 }
 
-body.projects{
-  font-family: "hack", monospace;
-  font-size: 16px;
-  font-weight: 400;
-  background-color: var(--oc-gray-9);
-  color: var(--oc-gray-4);
+/*C++ STYLE*/
+.cdef{
+  color: var(--oc-violet-5);
+}
+
+.cfunc{
+  color: var(--oc-blue-6);
+}
+
+.cvar{
+  color: var(--oc-red-9);
+  margin-left: 2rem;
+}
+.ctext{
+  color: var(--oc-orange-6);
 }

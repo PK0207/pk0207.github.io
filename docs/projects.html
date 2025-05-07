@@ -44,17 +44,35 @@
   <main>
   
   <div>
-    
-    <div id="project-card">
-      <span class="pydef">def</span> <span class="pyfunc">PhD_research</span>(PK, HST, MCMC):
-      <br>
-      <span class="pyvar" style="margin: 2rem;">data = </span>"Observations from a disk in the UV."<br>
-      <span class="pyvar" style="margin: 2rem;">model = </span>"MCMC parameter fit."
+    <div id="project-card" class="text-image-container">
+      <div>
+        <span class="pydef">def</span> <span class="pyfunc">PhD_research</span>():
+        <br>
+        <span  class="pyfunc" style="margin-left: 2rem;">print</span>(<span style="color: #ffa94d">"Estimating mass loss rates of a disk due to low-velocity winds."</span>)<br>
+        <span class="pyvar">data</span> = <span>uv_hst_spectra</span><br>
+        <span class="pyvar">model</span> = [<span style="color: #3bc9db">disk_temperature, disk_density, rotation_speed, wind_velocity</span>]<br>
+        <span class="pyvar">mass_loss_rate</span> = wind_velocity * disk_density
+        <br>
+        <br>
+        <span class="pydef" style="margin: 2rem;">return </span><span class="pyvar" style="margin-left:0">mass_loss_rate</span>
+      </div>
+      <img src="assets/images/wind_schematic.png" style="background-color: white;" alt="Schematic of disk wind model, showing a cross-section of a disk">
     </div>
     <br><br>
-    <div id="project-card">
-      "<span class="pydef">CV</span>":
-      "<a class="pyvar" href="/Prerana_CV.pdf" target="_blank">cv.pdf</a>",
+    <div  id="project-card" class="text-image-container">
+      <div>
+        <span class="cdef">std::vector</span> <span class="cfunc">MSc_research</span>():
+        <br>
+        &#123;<br>
+        <span class="cvar">cout</span> &lt;&lt;<span class="ctext"> "Semi-analytic, hydrodynamical, zoom-in simulations of dwarf galaxies."</span>;<br>
+        <span class="cdef" style="margin-left: 2rem;">int</span><span class="cvar">num_dwarf_halos</span>;<br>
+        <span class="cdef" style="margin-left: 2rem;">int</span><span class="cvar">halo_radius</span>;<br>
+        <span class="cdef" style="margin-left: 2rem;">int</span><span class="cvar">halo_mass</span>;<br>
+        <br>
+        <span class="cdef" style="margin-left: 2rem;">return</span><span class="cvar">dwarf_halo_properties</span>;<br>
+        &#125;<br>
+      </div>
+      <img src="assets/images/vol14_mtot.png" alt="Total mass of dwarf halos around a host">
     </div>
   </div>
 
