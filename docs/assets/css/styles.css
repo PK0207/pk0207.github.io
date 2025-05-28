@@ -161,12 +161,23 @@ body.projects{
 .text-image-container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
   /*align-items: center;  optional: align vertically */
 }
 
+.text-image-container > div {
+  flex: 1 1 50%;
+  min-width: 250px;
+}
+
 .text-image-container img {
-  width: 30%;
+  flex: 1 1 30%;
+  width: 100%;
+  max-width: 300px;
   height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
 }
 
 /*PYTHON STYLE*/
