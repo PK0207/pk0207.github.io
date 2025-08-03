@@ -234,6 +234,8 @@ body.projects{
 .markdown {
   color: #212529;
   font-style: "Roboto", sans-serif;
+  font-size:1.2rem;
+  margin-left:8vw;
 }
 .codebox {
     /* Below are styles for the codebox (not the code itself) */
@@ -246,5 +248,45 @@ body.projects{
     /* Styles in here affect the text of the codebox */
     font-size:0.9em;
     font-family: "hack", monospace;
+    color:#212529;
     /* You could also put all sorts of styling here, like different font, color, underline, etc. for the code. */
+}
+.markdown > img {
+  width: 100vw;       /* Full viewport width */
+  margin: 0;
+  padding: 0;
+}
+
+.markdown > h1 {
+  color:#212529;
+  font-size: 4rem;
+}
+
+.markdown > h2 {
+  color:#212529;
+  font-size: 2.5rem;
+}
+
+.markdown > h3 {
+  color:#212529;
+  font-size: 1.6rem;
+}
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #f1f3f5;
+    width: 50px;
+    height: 50px;
+    display: block;
+    padding: 3px;
+}
+
+#return-to-top i {
+    color: #212529;
+    margin: 0;
+    position: relative;
+    left: 16px;
+    top: 13px;
+    font-size: 19px;
 }
