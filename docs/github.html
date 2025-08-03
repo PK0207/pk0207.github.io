@@ -102,6 +102,16 @@
             </ul>
 
             <h3>Merge conflicts</h3>
+            <p>Sometimes, when merging, pulling, pushing, or doing any version control, GitHub will not like you committing after applying changes. Here we have an example:</p><br><br>
+            <div class="codebox">
+                <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD <br>
+                    &lt;link type="text/css" rel="stylesheet" media="all" href="style.css" /&gt;<br>
+                =======<br>
+                    &lt;!-- no style --&gt;<br>
+                &gt;&gt;&gt;&gt;&gt;&gt;&gt; master<br>
+                </code>
+            </div>
+            <br><br>
             <p>The &lt;&lt;&lt; indicates the parts of the original file that are in conflict<br>
             The &gt;&gt;&gt; indicates the changes you made that are in conflict with the original file<br>
             The == separates the two</p>
@@ -170,18 +180,18 @@
             <strong>Note:</strong> separate into mac vs windows users<br>
             <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">Generating a new SSH key and adding it to the ssh-agent - GitHub Docs</a></p>
 
-            <pre><code>ssh-keygen -t ed25519 -C "your_email@example.com"
+            <div class="codebox"><code>ssh-keygen -t ed25519 -C "your_email@example.com"<br>
 
-            &gt; Enter a file in which to save the key (/home/YOU/.ssh/id_ALGORITHM):[Press enter]
+            &gt; Enter a file in which to save the key (/home/YOU/.ssh/id_ALGORITHM):[Press enter]<br>
 
-            YES PASSWORD
-            &gt; Enter passphrase (empty for no passphrase): [Type a passphrase]
-            &gt; Enter same passphrase again: [Type passphrase again]
+            YES PASSWORD<br>
+            &gt; Enter passphrase (empty for no passphrase): [Type a passphrase]<br>
+            &gt; Enter same passphrase again: [Type passphrase again]<br>
 
-            eval "$(ssh-agent -s)"
+            eval "$(ssh-agent -s)"<br>
 
-            ssh-add ~/.ssh/id_ed25519
-            </code></pre>
+            ssh-add ~/.ssh/id_ed25519<br>
+            </code></div>
 
             <h2>Exercises (collaborative)</h2>
             <ol>
@@ -229,21 +239,6 @@
             <li><code>git rebase</code> move your changes to a different (later) point on the commit timeline</li>
             </ul>
             <p>You can make pull requests for branches on the github app.</p>
-
-            <h2>Manually resolving conflict</h2>
-            <p>Sometimes, when merging, pulling, pushing, or doing any version control, GitHub will not like you committing after applying changes. Here we have an example:</p>
-
-            <pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-                &lt;link type="text/css" rel="stylesheet" media="all" href="style.css" /&gt;
-            =======
-                &lt;!-- no style --&gt;
-            &gt;&gt;&gt;&gt;&gt;&gt;&gt; master
-            </code></pre>
-
-            <p>The <strong>&lt;&lt;&lt;</strong> indicates the parts of the <strong>original</strong> file that are in conflict <br>
-            The <strong>&gt;&gt;&gt;</strong> indicates the <strong>changes you made</strong> that are in conflict with the original file <br>
-            The <strong> == </strong> separates the two <br>
-            To fix this, you will have to manually edit the file so that your changes are included and work. Remove the &lt;&lt;&lt;,  == , and &gt;&gt;&gt; lines after you are done. Then the commit will work.</p>
         </div>
     </div>
   </main>

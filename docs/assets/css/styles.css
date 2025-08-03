@@ -235,3 +235,16 @@ body.projects{
   color: #212529;
   font-style: "Roboto", sans-serif;
 }
+.codebox {
+    /* Below are styles for the codebox (not the code itself) */
+    background-color:#EEEEFF;
+    overflow:auto;
+    padding:10px;
+    margin-left: 2vw;
+}
+.codebox code {
+    /* Styles in here affect the text of the codebox */
+    font-size:0.9em;
+    font-family: "hack", monospace;
+    /* You could also put all sorts of styling here, like different font, color, underline, etc. for the code. */
+}
