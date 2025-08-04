@@ -40,7 +40,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
-<body class="projects" style="background:#f1f3f5; font-family: 'Roboto', sans-serif; margin:0;">
+<body style="background:#f1f3f5; font-family: 'Roboto', sans-serif; margin:0;">
   <!------------NAVBAR---------->
   <ul class="navbar">
     <li><a href='index.html' style="margin-left: 1.5rem;"><img src="assets/logo-bw-navbar.png" alt="Home" style="justify-content:center; margin-top: 1.5rem; width: 100px;"></a></li>
@@ -50,14 +50,19 @@
     <li style="color:#212529; font-size:1.2rem">GitHub Issues</li>
   </ul>
   <!---------------------------->
-    <div class="markdown">
-        <h1>GitHub Workshop</h1>
-            <p>(Demo on scripts by Prerana Kottapalli 06/2025)</p>
-
-            <p>Most of you are familiar with GitHub, so let's refamiliarize ourselves with the GitHub workflow, and use it to see how valuable git is.</p>
-            <br>
-    </div>
-    <a id="workflow"><img src="assets/images/GitHub slides/git workflows.svg"></a>
+    <section class="scroll-section">
+        <div class="text-boxes pinned-bottom-right" style="bottom: 0;">
+            <div class="markdown">
+                <h1 style="color:#f1f3f5">GitHub Workshop</h1>
+                <p style="color:#f1f3f5">(Demo on scripts by Prerana Kottapalli 06/2025)</p>
+                <p style="color:#f1f3f5">Most of you are familiar with GitHub, so let's refamiliarize ourselves with the GitHub workflow, and use it to see how valuable git is.</p>
+            </div>
+        </div>
+        <img src="assets/images/GitHub slides/GitHub Workshop.svg">
+    </section>
+    <section class="scroll-section">
+        <a id="workflow"><img src="assets/images/GitHub slides/git workflows.svg"></a>
+    </section>
     <img src="assets/images/GitHub slides/slide2.svg">
     <div class="markdown">
         <h2>Commits</h2>
@@ -83,8 +88,6 @@
             <li>You can track your progress, and see older versions of your code in case you want to use smth</li>
             <li>If you make a mistake, it is easy to revert to an earlier version of your code! (we will do that in an exercise)</li>
         </ol>
-    </div>
-    <div class="markdown">
         <h2>Push</h2>
     </div>
     <img src="assets/images/GitHub slides/slide5.svg">
@@ -110,10 +113,7 @@
     <img src="assets/images/GitHub slides/slide8.svg">
     <div class="markdown">
         <h1><a id="collaborating">Collaboration:</a></h1>
-            <h2>Branches</h2>
-    </div>
-    
-    <div class="markdown">
+        <h2>Branches</h2>
         <p>A branch starts as a copy of code that can be edited independently of the original.</p>
         <ul>
             <li>Branches are used to make extensive changes on a collaborative repository to introduce a new feature after testing.</li>
@@ -131,11 +131,10 @@
     <img src="assets/images/GitHub slides/conflicts2.svg">
     <div class="markdown">
         <h1>Command line git</h1>
+        <p>The same workflow, just using commands in terminal.</p>
     </div>
     <img src="assets/images/GitHub slides/git flowchart.svg">
     <div class="markdown">    
-        <p>The same workflow, just using commands in terminal.</p>
-
         <h1><a id='excercises'>Exercise Break!</a></h1>
 
         <h2>GitHub git</h2>
@@ -194,7 +193,7 @@
         <p>Secure shell protocol is used to log into github from the command line. They no longer use email logins. So, if you haven't set this up yet we will do this now.<br>
         <strong>Note:</strong> separate into mac vs windows users<br>
         <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">Generating a new SSH key and adding it to the ssh-agent - GitHub Docs</a></p>
-
+        
         <div class="codebox">
             <code>ssh-keygen -t ed25519 -C "your_email@example.com"<br>
 
@@ -209,7 +208,9 @@
             ssh-add ~/.ssh/id_ed25519<br>
             </code>
         </div>
-    
+    </div>
+    <img src="assets/images/GitHub slides/issues.svg">
+    <div class="markdown">
         <h1>Cheat Sheet</h1>
             <h2>Basic Basics</h2>
             <ul>
@@ -252,5 +253,18 @@
     </div>
     <a href="#" id="return-to-top"><i class="fa-solid fa-chevron-up"></i></a>
 </body>
+<script>
+    const textBoxes = document.querySelectorAll(".markdown");
+    window.addEventListener("scroll", () => {
+        textBoxes.forEach((box) => {
+            const rect = box.getBoundingClientRect();
+            if (rect.top < window.innerHeight * 0.7 && rect.bottom > 0) {
+                box.classList.add("visible");
+            } else {
+                box.classList.remove("visible");
+            }
+        });
+    });
+</script>
 
 </html>
