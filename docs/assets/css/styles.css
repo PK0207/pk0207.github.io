@@ -21,7 +21,7 @@ body.index{
   font-family: "hack", monospace;
   font-size: 16px;
   font-weight: 400;
-  background-color: var(--oc-gray-9);
+  background-color: var(--oc-black);
   color: var(--oc-green-9);
 }
 
@@ -144,7 +144,7 @@ a.key:hover::before {
 
 /*PROJECT CARDS*/
 #project-card{
-  background-color: var(--oc-gray-8);
+  background-color: #000080;
   height: fit-content;
   width: 100%;
   padding: 2rem;
@@ -154,7 +154,7 @@ body.projects{
   font-family: "hack", monospace;
   font-size: 16px;
   font-weight: 400;
-  background-color: var(--oc-gray-9);
+  background-color: var(--oc-black);
   color: var(--oc-gray-4);
 }
 
@@ -163,7 +163,7 @@ body.projects{
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1.5rem;
-  /*align-items: center;  optional: align vertically */
+  align-items: center;
 }
 
 .text-image-container > div {
@@ -171,15 +171,34 @@ body.projects{
   min-width: 250px;
 }
 
-.text-image-container img {
+.image-wrapper {
+  position: relative;
   flex: 1 1 30%;
-  width: 100%;
   max-width: 300px;
-  height: auto;
-  aspect-ratio: auto;
-  object-fit: contain;
+  overflow: hidden;
 }
 
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+.overlay {
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background: rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: bottom 0.4s ease;
+}
+.image-wrapper:hover .overlay {
+  bottom: 0;
+}
 /*PYTHON STYLE*/
 .pydef{
   color: var(--oc-yellow-4);
@@ -192,6 +211,20 @@ body.projects{
 .pyvar{
   color: var(--oc-green-4);
   margin: 2rem;
+}
+
+/*R STYLE*/
+.rdef{
+  color: var(--oc-violet-4);
+}
+
+.rfunc{
+  color: var(--oc-red-6);
+}
+
+.rvar{
+  color: var(--oc-orange-4);
+  margin-left: 2rem;
 }
 
 /*C++ STYLE*/
@@ -209,4 +242,106 @@ body.projects{
 }
 .ctext{
   color: var(--oc-orange-6);
+}
+
+/*Markdown styling*/
+.markdown {
+  color: #212529;
+  font-family: "Roboto", sans-serif;
+  font-size:1.2rem;
+  margin-left:8vw;
+  margin-top: 2vw;
+  display: block;
+  height:100vh;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.markdown.visible {
+  opacity: 1;
+}
+
+.scroll-section {
+  position: relative;
+  display: flex;
+}
+
+.text-boxes {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  justify-content: flex-start;
+  padding: 2rem;
+}
+
+.text-boxes.pinned-bottom-right {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 40%;
+  max-width: 500px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.text-boxes.pinned-bottom-right .markdown {
+  margin: 0;
+}
+
+.codebox {
+    background-color:#EEEEFF;
+    overflow:auto;
+    padding:10px;
+    margin-left: 2vw;
+}
+.codebox code {
+    font-size:0.9em;
+    font-family: "hack", monospace;
+    color:#212529;
+}
+.markdown > img {
+  position: sticky;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.markdown > h1 {
+  color:#212529;
+  font-size: 4rem;
+  margin-top: 2vw;
+}
+
+.markdown > h2 {
+  color:#212529;
+  font-size: 2.5rem;
+  margin-top: 2vw;
+}
+
+.markdown > h3 {
+  color:#212529;
+  font-size: 1.6rem;
+  margin-top: 2vw;
+}
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    display: block;
+    padding: 3px;
+}
+#return-to-top i {
+    color: #69db7c;
+    margin: 0;
+    justify-content: center;
+    font-size: 2rem;
 }

@@ -35,15 +35,16 @@
 <body class="projects">
   <!------------NAVBAR---------->
   <ul class="navbar">
-    <li><a href='index.html' style="margin-left: 1.5rem;"><img src="assets/android-chrome-192x192 copy.png" alt="Home" style="justify-content:center; margin-top: 1.5rem; width: 100px;"></a></li>
+    <li><a href='index.html' style="margin-left: 1.5rem;"><img src="assets/android-chrome-192x192_transparent.png" alt="Home" style="justify-content:center; margin-top: 1.5rem; width: 100px;"></a></li>
     <li><a class = "navlink" href="#">PROJECTS</a></li>
-    <li><a class = "navlink" href="#">PERSONAL</a></li>
+    <li><a class = "navlink" href="personal.html">PERSONAL</a></li>
     <li><a class = "navlink" href="#">CONTACT</a></li>
   </ul>
 
   <main>
   
   <div>
+    <!------------PYTHON disk winds----------------->
     <div id="project-card" class="text-image-container">
       <div>
         <span class="pydef">def</span> <span class="pyfunc">PhD_research</span>():
@@ -56,9 +57,12 @@
         <br>
         <span class="pydef" style="margin: 2rem;">return </span><span class="pyvar" style="margin-left:0">mass_loss_rate</span>
       </div>
-      <img src="assets/images/wind_schematic.png" style="background-color: white;" alt="Schematic of disk wind model, showing a cross-section of a disk">
+      <div class="image-wrapper">
+        <img src="assets/images/wind_schematic.png" style="background-color: white;" alt="Schematic of disk wind model, showing a cross-section of a disk">
+      </div>
     </div>
     <br><br>
+    <!---------------C++ cosmological simulations------------>
     <div  id="project-card" class="text-image-container">
       <div>
         <span class="cdef">std::vector</span> <span class="cfunc">MSc_research</span>():
@@ -72,8 +76,54 @@
         <span class="cdef" style="margin-left: 2rem;">return</span><span class="cvar">dwarf_halo_properties</span>;<br>
         &#125;<br>
       </div>
-      <img src="assets/images/vol14_mtot.png" alt="Total mass of dwarf halos around a host">
+      <div class="image-wrapper">
+        <img src="assets/images/vol14_mtot.png" alt="Total mass of dwarf halos around a host">
+      </div>
     </div>
+    <br><br>
+    <!------------PYTHON noise characterization------------>
+    <div id="project-card" class="text-image-container">
+      <div>
+        <span class="pydef">def</span> <span class="pyfunc">Las_Cumbres_Observatory</span>():
+        <br>
+        <span  class="pyfunc" style="margin-left: 2rem;">print</span>(<span style="color: #ffa94d">"Telegraph noise characterization in CMOS cameras at low Signal-to-Noise ratios."</span>)<br>
+        <span class="pyvar">data</span> = <span>CMOS dark frames</span><br>
+        <span class="pyvar">model</span> = [<span style="color: #3bc9db">gaussian_mixture_models</span>]<br>
+        <span class="pyvar">parameters</span> = non_uniformity, noise_floor
+        <span class="pyvar">detector_noise_map</span> = [[parameters_per_pixel], [pixel_map]]
+        <br>
+        <br>
+        <span class="pydef" style="margin: 2rem;">return </span><span class="pyvar" style="margin-left:0">detector_noise_map</span>
+      </div>
+      <div class="image-wrapper">
+        <img src="assets/images/bad_pixel_map.png" alt="Map of bad pixels from noise characterization, with modality of noise distribution indicated by color.">
+      </div>
+    </div>
+    <br><br>
+    <!------------R CalCOFI------------>
+    <div id="project-card" class="text-image-container">
+      <div>
+        <span class="rdef">CalCOFI_data_viz</span> <span class="rfunc">&lt;- function</span>(){
+        <br><br>
+        <span  class="rfunc" style="margin-left: 2rem;">print</span>(<span style="color: #4dabf7">"Visualizing spatio-temporal data from the California Cooperative Oceanic Fisheries Initiative (CalCOFI) missions."</span>)<br>
+        <br>
+        <span class="rvar">75_years_of_data</span> &lt;- <span>temp, O2, chlorophyll, salinity</span><br>
+        <br>
+        <span class="rvar">RShiny_website</span> &lt;- <span style="color: #3bc9db">mapbox_interactive, real_time_data_queries</span><br>
+        <br>
+        <span class="rvar">out</span> &lt;- cross_sect_plots, time_series_plots, interactive_maps
+        <br>
+        <br>
+        <span class="rfunc">return </span>(out)
+        <br><br>
+        }
+      </div>
+      <div class="image-wrapper">
+        <img src="assets/images/CalCOFI_site.png" alt="Screenshot of the CalCOFI data visualization RShiny app. Shows the interactive map, and a customizable plot of depth vs salinity for a site in the 4 seasons of the year.">
+        <!--<img src="assets/images/depthavg_opt2.png" alt="Plot showing the median (red points) interquartile range (capped horizontal lines) and mean (black vertical line) for oxygen concentation with depth.">-->
+      </div>
+    </div>
+    <br><br>
   </div>
 
   </main>
