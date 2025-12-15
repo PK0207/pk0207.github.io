@@ -105,22 +105,21 @@
       <div>
         <span class="rdef">CalCOFI_data_viz</span> <span class="rfunc">&lt;- function</span>(){
         <br><br>
-        <span  class="rfunc" style="margin-left: 2rem;">print</span>(<span style="color: #4dabf7">"Visualizing spatio-temporal data from the California Cooperative Oceanic Fisheries Initiative (CalCOFI) missions."</span>)<br>
+        <span  class="rfunc" style="margin-left: 2rem;">print</span>(<span style="color: #228be6">"Visualizing spatio-temporal data from the California Cooperative Oceanic Fisheries Initiative (CalCOFI) missions."</span>)<br>
         <br>
-        <span class="rvar">75_years_of_data</span> &lt;- <span>temp, O2, chlorophyll, salinity</span><br>
+        <span class="rvar">75_years_of_data</span> &lt;- c(<span style="color: #38d9a9">temp, O2, chlorophyll, salinity</span>)<br>
         <br>
-        <span class="rvar">RShiny_website</span> &lt;- <span style="color: #3bc9db">mapbox_interactive, real_time_data_queries</span><br>
+        <span class="rvar">RShiny_website</span> &lt;- c(<span style="color: #38d9a9">mapbox_interactive, real_time_data_queries</span>)<br>
         <br>
-        <span class="rvar">out</span> &lt;- cross_sect_plots, time_series_plots, interactive_maps
-        <br>
+        <span class="rvar">out</span> &lt;- c(<span style="color: #38d9a9">cross_sect_plots, time_series_plots, interactive_maps</span>)<br>
         <br>
         <span class="rfunc">return </span>(out)
-        <br><br>
+        <br>
         }
       </div>
       <div class="image-wrapper">
-        <img src="assets/images/CalCOFI_site.png" alt="Screenshot of the CalCOFI data visualization RShiny app. Shows the interactive map, and a customizable plot of depth vs salinity for a site in the 4 seasons of the year.">
-        <!--<img src="assets/images/depthavg_opt2.png" alt="Plot showing the median (red points) interquartile range (capped horizontal lines) and mean (black vertical line) for oxygen concentation with depth.">-->
+        <!--<img src="assets/images/CalCOFI_site.png" alt="Screenshot of the CalCOFI data visualization RShiny app. Shows the interactive map, and a customizable plot of depth vs salinity for a site in the 4 seasons of the year.">-->
+        <img src="assets/images/depthavg_opt2.png" alt="Plot showing the median (red points) interquartile range (capped horizontal lines) and mean (black vertical line) for oxygen concentation with depth.">
       </div>
     </div>
     <br><br>
