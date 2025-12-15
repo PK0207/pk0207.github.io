@@ -21,7 +21,7 @@ body.index{
   font-family: "hack", monospace;
   font-size: 16px;
   font-weight: 400;
-  background-color: var(--oc-gray-9);
+  background-color: var(--oc-black);
   color: var(--oc-green-9);
 }
 
@@ -144,7 +144,7 @@ a.key:hover::before {
 
 /*PROJECT CARDS*/
 #project-card{
-  background-color: var(--oc-gray-8);
+  background-color: #000080;
   height: fit-content;
   width: 100%;
   padding: 2rem;
@@ -154,7 +154,7 @@ body.projects{
   font-family: "hack", monospace;
   font-size: 16px;
   font-weight: 400;
-  background-color: var(--oc-gray-9);
+  background-color: var(--oc-black);
   color: var(--oc-gray-4);
 }
 
@@ -211,6 +211,20 @@ body.projects{
 .pyvar{
   color: var(--oc-green-4);
   margin: 2rem;
+}
+
+/*R STYLE*/
+.rdef{
+  color: var(--oc-violet-4);
+}
+
+.rfunc{
+  color: var(--oc-red-6);
+}
+
+.rvar{
+  color: var(--oc-orange-4);
+  margin-left: 2rem;
 }
 
 /*C++ STYLE*/
