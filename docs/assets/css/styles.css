@@ -17,6 +17,7 @@
   font-style: normal;
   src: url("../webfonts/Naville-Regular.ttf"); 
 }
+
 body.index{
   font-family: "hack", monospace;
   font-size: 16px;
@@ -37,14 +38,11 @@ main {
 @media (min-width: 576px) {
   main {
     font-size: 18px;
-    width: 90%; } }
+    width: 95%; } }
 @media (min-width: 768px) {
   main {
     font-size: 20px;
-    width: 80%; } }
-/*h1 {
-  
-}*/
+    width: 90%; } }
 
 p {
   margin: 0; }
@@ -90,7 +88,7 @@ a.key::before {
   left:6rem;
   opacity: 0;
   transform: translateX(-0.5em);
-  transition: opacity 0.3s, transform 0.3s;
+  transition: opacity 0.25s, transform 0.25s;
 }
 
 a.key:hover::before {
@@ -143,11 +141,17 @@ a.key:hover::before {
 }
 
 /*PROJECT CARDS*/
-#project-card{
-  background-color: #000080;
+.project-card{
+  /*background-color: #000080;*/
+  background-color: var(--oc-gray-9);
   height: fit-content;
-  width: 100%;
+  /*width: 100%;*/
   padding: 2rem;
+
+  /* collapse support */
+  overflow: hidden;
+  height: auto;
+  /*transition: height 0.35s cubic-bezier(.4, 0, .2, 1);*/
 }
 
 body.projects{
@@ -344,4 +348,78 @@ body.projects{
     margin: 0;
     justify-content: center;
     font-size: 2rem;
+}
+
+/* Window controls */
+.project-window {
+  width: 100%;
+}
+
+.project-card > * {
+  width: 100%;
+}
+
+.title-bar {
+  height: 36px;
+  background: var(--oc-gray-4);
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  padding: 0 12px;
+  user-select: none;
+}
+
+.title-bar span {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: black;
+  font-weight: 200;
+  font-family: 'Arial'/*, , Arial, sans-serif*/;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap; 
+}
+
+.title-bar span img {
+  height: 0.9em;
+  width: auto;
+  flex-shrink: 0;
+}
+
+.window-controls {
+  display: flex;
+  gap: 6px;
+}
+
+.window-controls button {
+  font-size: 12px;
+}
+
+.window-controls .close-icon {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+.window-controls .close:hover {
+  background: var(--oc-red-9);
+}
+
+/* Collapsed state */
+.project-window.collapsed .project-card {
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+}
+
+.project-window.collapsed .window-controls .close-icon{
+  transform: rotate(45deg);
+}
+
+.project-window.collapsed .window-controls .close:hover {
+  background: var(--oc-green-9);
 }

@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="/assets/css/normalize.css" />
   <link rel="stylesheet" href="/assets/css/open-color.css" />
   <link rel="stylesheet" href="/assets/css/styles.css" />
-  <script src="/assets/js/typed.umd.js"></script>
+  <script src="/assets/js/project_windows.js"></script>
 </head>
 
 <body class="projects">
@@ -45,98 +45,132 @@
   
   <div>
     <!------------PYTHON disk winds----------------->
-    <div id="project-card" class="text-image-container">
-      <div>
-        <span class="pydef">def</span> <span class="pyfunc">PhD_research</span>():
-        <br>
-        <span  class="pyfunc" style="margin-left: 2rem;">print</span>(<span style="color: #ffa94d">"Estimating mass loss rates of a disk due to low-velocity winds."</span>)<br>
-        <span class="pyvar">data</span> = <span>uv_hst_spectra</span><br>
-        <span class="pyvar">model</span> = [<span style="color: #3bc9db">disk_temperature, disk_density, rotation_speed, wind_velocity</span>]<br>
-        <span class="pyvar">mass_loss_rate</span> = wind_velocity * disk_density
-        <br>
-        <br>
-        <span class="pydef" style="margin: 2rem;">return </span><span class="pyvar" style="margin-left:0">mass_loss_rate</span>
+    <div class="project-window">
+      <div class="title-bar">
+        <span><img src="assets/images/python-logo-only.svg"> PhD Research</span>
+        <div class="window-controls">
+          <button class="maximize">&#9634;</button>
+          <button type="button" class="close">
+            <div class="close-icon">&#128937;</div>
+          </button>
+        </div>
       </div>
-      <div class="image-wrapper">
-        <img src="assets/images/wind_schematic.png" style="background-color: white;" alt="Schematic of disk wind model, showing a cross-section of a disk">
+      <div class="project-card text-image-container">
+        <div>
+          <span class="pydef">def</span> <span class="pyfunc">PhD_research</span>():
+          <br>
+          <span  class="pyfunc" style="margin-left: 2rem;">print</span>(<span style="color: #ffa94d">"Estimating mass loss rates of a disk due to low-velocity winds."</span>)<br>
+          <span class="pyvar">data</span> = <span>uv_hst_spectra</span><br>
+          <span class="pyvar">model</span> = [<span style="color: #3bc9db">disk_temperature, disk_density, rotation_speed, wind_velocity</span>]<br>
+          <span class="pyvar">mass_loss_rate</span> = wind_velocity * disk_density
+          <br>
+          <br>
+          <span class="pydef" style="margin: 2rem;">return </span><span class="pyvar" style="margin-left:0">mass_loss_rate</span>
+        </div>
+        <div class="image-wrapper">
+          <img src="assets/images/wind_schematic.png" style="background-color: white;" alt="Schematic of disk wind model, showing a cross-section of a disk">
+        </div>
       </div>
     </div>
     <br><br>
     <!---------------C++ cosmological simulations------------>
-    <div  id="project-card" class="text-image-container">
-      <div>
-        <span class="cdef">std::vector</span> <span class="cfunc">MSc_research</span>():
-        <br>
-        &#123;<br>
-        <span class="cvar">cout</span> &lt;&lt;<span class="ctext"> "Semi-analytic, hydrodynamical, zoom-in simulations of dwarf galaxies."</span>;<br>
-        <span class="cdef" style="margin-left: 2rem;">int</span><span class="cvar">num_dwarf_halos</span>;<br>
-        <span class="cdef" style="margin-left: 2rem;">int</span><span class="cvar">halo_radius</span>;<br>
-        <span class="cdef" style="margin-left: 2rem;">int</span><span class="cvar">halo_mass</span>;<br>
-        <br>
-        <span class="cdef" style="margin-left: 2rem;">return</span><span class="cvar">dwarf_halo_properties</span>;<br>
-        &#125;<br>
+    <div class="project-window">
+      <div class="title-bar">
+        <span><img src="assets/images/C++_Logo.svg"> MSc Research</span>
+        <div class="window-controls">
+          <button class="maximize">&#9634;</button>
+          <button type="button" class="close">
+            <div class="close-icon">&#128937;</div>
+          </button>
+        </div>
       </div>
-      <div class="image-wrapper">
-        <img src="assets/images/vol14_mtot.png" alt="Total mass of dwarf halos around a host">
+      <div  class="project-card text-image-container">
+        <div>
+          <span class="cdef">std::vector</span> <span class="cfunc">MSc_research</span>():
+          <br>
+          &#123;<br>
+          <span class="cvar">cout</span> &lt;&lt;<span class="ctext"> "Semi-analytic, hydrodynamical, zoom-in simulations of dwarf galaxies."</span>;<br>
+          <span class="cdef" style="margin-left: 2rem;">int</span><span class="cvar">num_dwarf_halos</span>;<br>
+          <span class="cdef" style="margin-left: 2rem;">int</span><span class="cvar">halo_radius</span>;<br>
+          <span class="cdef" style="margin-left: 2rem;">int</span><span class="cvar">halo_mass</span>;<br>
+          <br>
+          <span class="cdef" style="margin-left: 2rem;">return</span><span class="cvar">dwarf_halo_properties</span>;<br>
+          &#125;<br>
+        </div>
+        <div class="image-wrapper">
+          <img src="assets/images/vol14_mtot.png" alt="Total mass of dwarf halos around a host">
+        </div>
       </div>
     </div>
     <br><br>
     <!------------PYTHON noise characterization------------>
-    <div id="project-card" class="text-image-container">
-      <div>
-        <span class="pydef">def</span> <span class="pyfunc">Las_Cumbres_Observatory</span>():
-        <br>
-        <span  class="pyfunc" style="margin-left: 2rem;">print</span>(<span style="color: #ffa94d">"Telegraph noise characterization in CMOS cameras at low Signal-to-Noise ratios."</span>)<br>
-        <span class="pyvar">data</span> = <span>CMOS dark frames</span><br>
-        <span class="pyvar">model</span> = [<span style="color: #3bc9db">gaussian_mixture_models</span>]<br>
-        <span class="pyvar">parameters</span> = non_uniformity, noise_floor
-        <span class="pyvar">detector_noise_map</span> = [[parameters_per_pixel], [pixel_map]]
-        <br>
-        <br>
-        <span class="pydef" style="margin: 2rem;">return </span><span class="pyvar" style="margin-left:0">detector_noise_map</span>
+    <div class="project-window">
+      <div class="title-bar">
+        <span><img src="assets/images/python-logo-only.svg"> Las Cumbres Observatory Project</span>
+        <div class="window-controls">
+          <button class="maximize">&#9634;</button>
+          <button type="button" class="close">
+            <div class="close-icon">&#128937;</div>
+          </button>
+        </div>
       </div>
-      <div class="image-wrapper">
-        <img src="assets/images/bad_pixel_map.png" alt="Map of bad pixels from noise characterization, with modality of noise distribution indicated by color.">
+      <div class="project-card text-image-container">
+        <div>
+          <span class="pydef">def</span> <span class="pyfunc">Las_Cumbres_Observatory</span>():
+          <br>
+          <span  class="pyfunc" style="margin-left: 2rem;">print</span>(<span style="color: #ffa94d">"Telegraph noise characterization in CMOS cameras at low Signal-to-Noise ratios."</span>)<br>
+          <span class="pyvar">data</span> = <span>CMOS dark frames</span><br>
+          <span class="pyvar">model</span> = [<span style="color: #3bc9db">gaussian_mixture_models</span>]<br>
+          <span class="pyvar">parameters</span> = non_uniformity, noise_floor
+          <span class="pyvar">detector_noise_map</span> = [[parameters_per_pixel], [pixel_map]]
+          <br>
+          <br>
+          <span class="pydef" style="margin: 2rem;">return </span><span class="pyvar" style="margin-left:0">detector_noise_map</span>
+        </div>
+        <div class="image-wrapper">
+          <img src="assets/images/bad_pixel_map.png" alt="Map of bad pixels from noise characterization, with modality of noise distribution indicated by color.">
+        </div>
       </div>
     </div>
     <br><br>
     <!------------R CalCOFI------------>
-    <div id="project-card" class="text-image-container">
-      <div>
-        <span class="rdef">CalCOFI_data_viz</span> <span class="rfunc">&lt;- function</span>(){
-        <br><br>
-        <span  class="rfunc" style="margin-left: 2rem;">print</span>(<span style="color: #4dabf7">"Visualizing spatio-temporal data from the California Cooperative Oceanic Fisheries Initiative (CalCOFI) missions."</span>)<br>
-        <br>
-        <span class="rvar">75_years_of_data</span> &lt;- <span>temp, O2, chlorophyll, salinity</span><br>
-        <br>
-        <span class="rvar">RShiny_website</span> &lt;- <span style="color: #3bc9db">mapbox_interactive, real_time_data_queries</span><br>
-        <br>
-        <span class="rvar">out</span> &lt;- cross_sect_plots, time_series_plots, interactive_maps
-        <br>
-        <br>
-        <span class="rfunc">return </span>(out)
-        <br><br>
-        }
+    <div class="project-window">
+      <div class="title-bar">
+        <span><img src="assets/images/Rlogo.svg"> CalCOFI Data Visualization</span>
+        <div class="window-controls">
+          <button class="maximize">&#9634;</button>
+          <button type="button" class="close">
+            <div class="close-icon">&#128937;</div>
+          </button>
+        </div>
       </div>
-      <div class="image-wrapper">
-        <img src="assets/images/CalCOFI_site.png" alt="Screenshot of the CalCOFI data visualization RShiny app. Shows the interactive map, and a customizable plot of depth vs salinity for a site in the 4 seasons of the year.">
-        <!--<img src="assets/images/depthavg_opt2.png" alt="Plot showing the median (red points) interquartile range (capped horizontal lines) and mean (black vertical line) for oxygen concentation with depth.">-->
+      <div class="project-card text-image-container">
+        <div>
+          <span class="rdef">CalCOFI_data_viz</span> <span class="rfunc">&lt;- function</span>(){
+          <br><br>
+          <span  class="rfunc" style="margin-left: 2rem;">print</span>(<span style="color: #228be6">"Visualizing spatio-temporal data from the California Cooperative Oceanic Fisheries Initiative (CalCOFI) missions."</span>)<br>
+          <br>
+          <span class="rvar">75_years_of_data</span> &lt;- c(<span style="color: #38d9a9">temp, O2, chlorophyll, salinity</span>)<br>
+          <br>
+          <span class="rvar">RShiny_website</span> &lt;- c(<span style="color: #38d9a9">mapbox_interactive, real_time_data_queries</span>)<br>
+          <br>
+          <span class="rvar">out</span> &lt;- c(<span style="color: #38d9a9">cross_sect_plots, time_series_plots, interactive_maps</span>)<br>
+          <br>
+          <span class="rfunc">return </span>(out)
+          <br>
+          }
+        </div>
+        <div class="image-wrapper">
+          <!--<img src="assets/images/CalCOFI_site.png" alt="Screenshot of the CalCOFI data visualization RShiny app. Shows the interactive map, and a customizable plot of depth vs salinity for a site in the 4 seasons of the year.">-->
+          <img src="assets/images/depthavg_opt2.png" alt="Plot showing the median (red points) interquartile range (capped horizontal lines) and mean (black vertical line) for oxygen concentation with depth.">
+        </div>
       </div>
     </div>
     <br><br>
   </div>
 
   </main>
-  <script>
-    var typed = new Typed("#typed", {
-      stringsElement: "#strings",
-      backSpeed: 10,
-      typeSpeed: 30,
-      backDelay: 1000,
-      loop: true,
-      smartBackspace: true,
-    });
-  </script>
+  
 </body>
 
 </html>
