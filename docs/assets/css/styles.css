@@ -353,6 +353,9 @@ body.projects{
 /* Window controls */
 .project-window {
   width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #808080;
+  box-shadow: 2px 2px 0 #ffffff, -2px -2px 0 #808080;
 }
 
 .project-card > * {
@@ -360,29 +363,27 @@ body.projects{
 }
 
 .title-bar {
-  height: 36px;
-  background: var(--oc-gray-4);
+  height: 24px;
   position: relative;
-
+  font-size: 12px;
+  font-weight: bold;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-
+  justify-content: space-between;
+  border-bottom: 2px solid #808080;
   padding: 0 12px;
   user-select: none;
+  background: #000080;
 }
 
 .title-bar span {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  color: black;
   font-weight: 200;
-  font-family: 'Arial'/*, , Arial, sans-serif*/;
+  font-family: 'Tahoma', 'Geneva', sans-serif;
   display: inline-flex;
   align-items: center;
   gap: 8px;
   white-space: nowrap; 
+  color: #ffffff;
 }
 
 .title-bar span img {
@@ -393,11 +394,25 @@ body.projects{
 
 .window-controls {
   display: flex;
-  gap: 6px;
+  gap: 2px;
 }
 
 .window-controls button {
+  width: 16px;
+  height: 16px;
+  padding: 0;
   font-size: 12px;
+  font-weight: bold;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #C0C0C0; /* classic gray button */
+  border: 2px solid #ffffff; /* top-left highlight */
+  border-bottom-color: #808080; /* bottom-right shadow */
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: background 0.2s;
 }
 
 .window-controls .close-icon {
@@ -422,4 +437,12 @@ body.projects{
 
 .project-window.collapsed .window-controls .close:hover {
   background: var(--oc-green-9);
+}
+
+.project-window.collapsed .title-bar {
+  background: #C0C0C0;
+}
+
+.project-window.collapsed .title-bar span{
+  color: #000000;
 }
