@@ -40,7 +40,6 @@
     <li><a class = "navlink" href="personal.html">PERSONAL</a></li>
     <li><a class = "navlink" href="#">CONTACT</a></li>
   </ul>
-
   <main>
   
   <div>
@@ -49,7 +48,7 @@
       <div class="title-bar">
         <span><img src="assets/images/python-logo-only.svg"> PhD Research</span>
         <div class="window-controls">
-          <button class="maximize">&#9634;</button>
+          <button class="maximize" onclick="window.location.href='project_pages/disk_winds.html'">&#9634;</button>
           <button type="button" class="close">
             <div class="close-icon">&#128937;</div>
           </button>
@@ -65,10 +64,12 @@
           <span class="pyvar">mass_loss_rate</span> = wind_velocity * disk_density
           <br>
           <br>
-          <span class="pydef" style="margin: 2rem;">return </span><span class="pyvar" style="margin-left:0">mass_loss_rate</span>
+          <span class="pydef" style="margin-left: 2rem;">return </span><span class="pyvar" style="margin-left:0">mass_loss_rate</span>
         </div>
         <div class="image-wrapper">
-          <img src="assets/images/wind_schematic.png" style="background-color: white;" alt="Schematic of disk wind model, showing a cross-section of a disk">
+          <a href="project_pages/disk_winds.html">
+            <img src="assets/images/wind_schematic.png" style="background-color: white;" alt="Schematic of disk wind model, showing a cross-section of a disk">
+          </a>
         </div>
       </div>
     </div>
@@ -125,7 +126,7 @@
           <span class="pyvar">detector_noise_map</span> = [[parameters_per_pixel], [pixel_map]]
           <br>
           <br>
-          <span class="pydef" style="margin: 2rem;">return </span><span class="pyvar" style="margin-left:0">detector_noise_map</span>
+          <span class="pydef" style="margin-left: 2rem;">return </span><span class="pyvar" style="margin-left:0">detector_noise_map</span>
         </div>
         <div class="image-wrapper">
           <img src="assets/images/bad_pixel_map.png" alt="Map of bad pixels from noise characterization, with modality of noise distribution indicated by color.">
