@@ -214,7 +214,7 @@ body.projects{
 
 .pyvar{
   color: var(--oc-green-4);
-  margin: 2rem;
+  margin-left: 2rem;
 }
 
 /*R STYLE*/
@@ -365,7 +365,7 @@ body.projects{
 .title-bar {
   height: 24px;
   position: relative;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -413,6 +413,14 @@ body.projects{
   cursor: pointer;
   box-sizing: border-box;
   transition: background 0.2s;
+}
+
+.window-controls button:active {
+  border-top: 2px solid #808080; /* swap highlight/shadow */
+  border-left: 2px solid #808080;
+  border-bottom: 2px solid #ffffff;
+  border-right: 2px solid #ffffff;
+  transform: translate(1px, 1px); /* subtle press down */
 }
 
 .window-controls .close-icon {
